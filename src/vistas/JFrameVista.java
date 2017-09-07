@@ -83,7 +83,6 @@ public class JFrameVista extends javax.swing.JFrame
 
         jButtonSortear.setBackground(new java.awt.Color(47, 81, 140));
         jButtonSortear.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButtonSortear.setForeground(new java.awt.Color(237, 244, 252));
         jButtonSortear.setText("SORTEAR");
 
         jLabelSorteado.setBackground(new java.awt.Color(237, 244, 252));
@@ -95,13 +94,11 @@ public class JFrameVista extends javax.swing.JFrame
         jMenuBar1.setBackground(new java.awt.Color(63, 108, 186));
         jMenuBar1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
 
-        jMenu1.setForeground(new java.awt.Color(237, 244, 252));
         jMenu1.setText("Datos");
         jMenu1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
 
         jMenuItem1.setBackground(new java.awt.Color(97, 134, 198));
         jMenuItem1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jMenuItem1.setForeground(new java.awt.Color(237, 244, 252));
         jMenuItem1.setText("Cargar datos...");
         jMenu1.add(jMenuItem1);
 
