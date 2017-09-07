@@ -97,7 +97,6 @@
           <Color blue="fc" green="f4" red="ed" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="SORTEAR"/>
-        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelSorteado">

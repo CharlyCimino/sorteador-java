@@ -15,10 +15,10 @@ public class JFrameVista extends javax.swing.JFrame
     
     public void iniciarVista()
     {
-        this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.establecerIcono();
-        this.setVisible(true);
+        this.setLocationRelativeTo(null); // Aparecerá en el centro de la pantalla
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE); // La aplicación por defecto se cierra al tocar la cruz
+        this.establecerIcono(); // OPCIONAL. Personaliza el ícono de la ventana
+        this.setVisible(true); // Hace la ventana visible
     }
     
     private void establecerIcono() {
@@ -33,11 +33,13 @@ public class JFrameVista extends javax.swing.JFrame
     
     public void cargarListener (ActionListener al)
     {
+        // El jMenuItem1 "escuchará" el evento "click" y lanzará el código que está dentro de al
         this.jMenuItem1.addActionListener( al );
     }
     
     public void sortearListener (ActionListener al)
     {
+        // El jButtonSortear "escuchará" el evento "click" y lanzará el código que está dentro de al
         this.jButtonSortear.addActionListener( al );
     }
     
@@ -48,18 +50,20 @@ public class JFrameVista extends javax.swing.JFrame
     
     public String seleccionarArchivoFuente()
     {
-        String ruta = "";
+        String ruta = ""; // Ruta inicial vacía
         
+        // JFileChooser es un componente que permite trabajar con el árbol de archivos del sistema operativo
         JFileChooser explorador = new JFileChooser();
-        explorador.setFileFilter(new FileNameExtensionFilter("Archivos de texto", "txt"));
-        explorador.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-        int resultado = explorador.showOpenDialog(null);
-        if (resultado != JFileChooser.CANCEL_OPTION)
+        explorador.setFileFilter(new FileNameExtensionFilter("Archivos de texto", "txt")); // Filtra por archivos de texto
+        explorador.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES); // Muestra archivos y carpetas
+        int resultado = explorador.showOpenDialog(null); // Abre la ventana en modo "Abrir"
+        if (resultado != JFileChooser.CANCEL_OPTION) // Si NO toca el botón de cancelar
         {
+            // Me quedo con la ruta absoluta del archivo seleccionado por el usuario
             ruta = explorador.getSelectedFile().getAbsolutePath();
         }
         
-        return ruta;
+        return ruta; // Devuelvo la ruta (OJO, pudo haber quedado vacía si es que tocó en cancelar)
     }
     
     @SuppressWarnings("unchecked")
@@ -81,7 +85,6 @@ public class JFrameVista extends javax.swing.JFrame
         jButtonSortear.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButtonSortear.setForeground(new java.awt.Color(237, 244, 252));
         jButtonSortear.setText("SORTEAR");
-        jButtonSortear.setEnabled(false);
 
         jLabelSorteado.setBackground(new java.awt.Color(237, 244, 252));
         jLabelSorteado.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N

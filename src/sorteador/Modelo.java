@@ -5,17 +5,21 @@ import java.util.ArrayList;
 
 public class Modelo 
 {
-    private ArchivadorTexto at;
-    private ArrayList<String> lineas;
+    private ArchivadorTexto at; // Se encarga de trabajar con .txt en el disco duro
+    private ArrayList<String> lineas; // Mi colección de líneas en formato String
     
-    public void cargarDatos(String s)
+    public void cargarDatos(String r)
     {
-        this.at = new ArchivadorTexto(s);
-        this.lineas = at.leerLineas();
+        // El archivador de texto se instancia pasándole la ruta (en String) donde se encuentra el .txt
+        this.at = new ArchivadorTexto(r);
+        this.lineas = at.leerLineas(); // Obtengo las líneas desde el archivo y se cargan en memoria RAM
     }
     
     public String obtenerLineaRandom()
     {
-        return this.lineas.get( (int) Math.floor(Math.random() * this.lineas.size() ) );
+        // Se necesitan números aleatorios entre 0 y la longitud (menos 1) 
+        int cantLineas = this.lineas.size(); // Cantidad de lineas
+        int numRandom = (int) Math.floor(Math.random() * cantLineas); // Da entre 0 y (cantLineas-1)
+        return this.lineas.get(numRandom); // Devuelvo la línea que esté en la posición numRandom
     }
 }
