@@ -26,6 +26,7 @@ public class Controlador
         if ( !r.isEmpty() ) // Si no está vacía
         {
             m.cargarDatos(r); // Le pido al modelo que cargue los datos que estén en esa ruta
+            v.activarBoton(); // Activo el botón de sortear
         }
     }
     

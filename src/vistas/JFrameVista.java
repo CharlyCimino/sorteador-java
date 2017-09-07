@@ -84,6 +84,7 @@ public class JFrameVista extends javax.swing.JFrame
         jButtonSortear.setBackground(new java.awt.Color(47, 81, 140));
         jButtonSortear.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButtonSortear.setText("SORTEAR");
+        jButtonSortear.setEnabled(false);
 
         jLabelSorteado.setBackground(new java.awt.Color(237, 244, 252));
         jLabelSorteado.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
