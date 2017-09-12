@@ -5,11 +5,12 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import javax.swing.JFileChooser;
+import javax.swing.UIManager;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-public class JFrameVista extends javax.swing.JFrame 
+public class Vista extends javax.swing.JFrame 
 {
-    public JFrameVista() {
+    public Vista() {
         initComponents();
     }
     
@@ -18,7 +19,9 @@ public class JFrameVista extends javax.swing.JFrame
         this.setLocationRelativeTo(null); // Aparecerá en el centro de la pantalla
         this.setDefaultCloseOperation(EXIT_ON_CLOSE); // La aplicación por defecto se cierra al tocar la cruz
         this.establecerIcono(); // OPCIONAL. Personaliza el ícono de la ventana
+        this.establecerLookAndFeel(); // OPCIONAL. Hace lucir a los componentes como si se tratase de un app nativa de Windows
         this.setVisible(true); // Hace la ventana visible
+        
     }
     
     private void establecerIcono() {
@@ -66,9 +69,22 @@ public class JFrameVista extends javax.swing.JFrame
         return ruta; // Devuelvo la ruta (OJO, pudo haber quedado vacía si es que tocó en cancelar)
     }
     
+    private void establecerLookAndFeel ()
+    {
+        try 
+        { 
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel"); 
+        } 
+        catch(Exception e)
+        { 
+            System.out.println("No se pudo cargar el Look & Feel");
+        }
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         jButtonSortear = new javax.swing.JButton();
         jLabelSorteado = new javax.swing.JLabel();

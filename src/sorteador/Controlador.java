@@ -3,17 +3,17 @@ package sorteador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import vistas.JFrameVista;
+import vistas.Vista;
 
 public class Controlador 
 {
     private Modelo m;
-    private JFrameVista v;
+    private Vista v;
 
     public void iniciar()
     {
         this.m = new Modelo(); // Instancio un nuevo modelo (COMPOSICION)
-        this.v = new JFrameVista(); // Instancio una nueva vista (COMPOSICION)
+        this.v = new Vista(); // Instancio una nueva vista (COMPOSICION)
         // Vinculo los eventos de la vista con el manejo que provee el controlador
         this.v.cargarListener(new CargarHandler());
         this.v.sortearListener(new SortearHandler());
