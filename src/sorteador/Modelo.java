@@ -5,13 +5,12 @@ import java.util.ArrayList;
 
 public class Modelo 
 {
-    private ArchivadorTexto at; // Se encarga de trabajar con .txt en el disco duro
     private ArrayList<String> lineas; // Mi colección de líneas en formato String
     
     public void cargarDatos(String r)
     {
         // El archivador de texto se instancia pasándole la ruta (en String) donde se encuentra el .txt
-        this.at = new ArchivadorTexto(r);
+        ArchivadorTexto at = new ArchivadorTexto(r);
         this.lineas = at.leerLineas(); // Obtengo las líneas desde el archivo y se cargan en memoria RAM
     }
     

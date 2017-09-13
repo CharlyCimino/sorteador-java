@@ -21,7 +21,6 @@ public class Vista extends javax.swing.JFrame
         this.establecerIcono(); // OPCIONAL. Personaliza el ícono de la ventana
         this.establecerLookAndFeel(); // OPCIONAL. Hace lucir a los componentes como si se tratase de un app nativa de Windows
         this.setVisible(true); // Hace la ventana visible
-        
     }
     
     private void establecerIcono() {
@@ -83,8 +82,7 @@ public class Vista extends javax.swing.JFrame
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jButtonSortear = new javax.swing.JButton();
         jLabelSorteado = new javax.swing.JLabel();
@@ -133,7 +131,7 @@ public class Vista extends javax.swing.JFrame
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabelSorteado, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
+                .addComponent(jLabelSorteado, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonSortear))
         );
