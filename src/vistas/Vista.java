@@ -82,10 +82,11 @@ public class Vista extends javax.swing.JFrame
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
-        jButtonSortear = new javax.swing.JButton();
         jLabelSorteado = new javax.swing.JLabel();
+        jButtonSortear = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -95,25 +96,17 @@ public class Vista extends javax.swing.JFrame
         setBackground(new java.awt.Color(237, 244, 252));
         setResizable(false);
 
-        jButtonSortear.setBackground(new java.awt.Color(47, 81, 140));
-        jButtonSortear.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButtonSortear.setText("SORTEAR");
-        jButtonSortear.setEnabled(false);
-
         jLabelSorteado.setBackground(new java.awt.Color(237, 244, 252));
-        jLabelSorteado.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        jLabelSorteado.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabelSorteado.setForeground(new java.awt.Color(20, 34, 57));
         jLabelSorteado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelSorteado.setText("SIN DATOS");
 
-        jMenuBar1.setBackground(new java.awt.Color(63, 108, 186));
-        jMenuBar1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jButtonSortear.setText("SORTEAR");
+        jButtonSortear.setEnabled(false);
 
         jMenu1.setText("Datos");
-        jMenu1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
 
-        jMenuItem1.setBackground(new java.awt.Color(97, 134, 198));
-        jMenuItem1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jMenuItem1.setText("Cargar datos...");
         jMenu1.add(jMenuItem1);
 
@@ -125,15 +118,15 @@ public class Vista extends javax.swing.JFrame
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButtonSortear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabelSorteado, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
+            .addComponent(jButtonSortear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabelSorteado, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                .addComponent(jLabelSorteado, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonSortear))
+                .addComponent(jButtonSortear, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
